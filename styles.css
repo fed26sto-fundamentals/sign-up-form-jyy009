@@ -1,3 +1,25 @@
-h1 {
-  color: red;
+* {
+  font-family: "Lato", Verdana, Tahoma, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero-image {
+  /* width: calc(100% / 3);
+  height: auto; */
+}
+
+form input:hover {
+  border: 1px solid #54abb8;
+}
+form input:focus {
+  border: 1px solid #54abb8;
+}
+
+form input:valid {
+  background-color: green;
+}
+
+form input:invalid {
+  border: solid red 2px;
 }
