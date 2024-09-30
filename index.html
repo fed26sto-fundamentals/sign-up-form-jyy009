@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./" />
+    <link rel="stylesheet" href="./styles.css" />
     <script src="./app.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,54 +14,85 @@
     />
   </head>
   <body>
-    <section class="hero-section">
-      <img src="./public/apartment.jpg" alt="apartment" class="hero-image" />
-    </section>
+    <div class="page-container">
+      <section class="hero-section">
+        <img
+          src="./public/apartments.jpg"
+          alt="apartment"
+          class="hero-image"
+          width="700px"
+        />
+      </section>
 
-    <section class="info-section">
-      <h3 class="info-text">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt,
-        suscipit illum quae dolores dolore ad pariatur minima, iure
-        voluptatibus, obcaecati eveniet! Corporis, eius numquam. Non iure
-        consectetur quasi quo voluptatem.
-      </h3>
-    </section>
+      <div class="info-container">
+        <h3 class="info-text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt,
+          suscipit illum quae dolores dolore ad pariatur minima, iure
+          voluptatibus, obcaecati eveniet! Corporis, eius numquam. Non iure
+          consectetur quasi quo voluptatem.
+        </h3>
 
-    <form action="https://httpbin.org/post" method="post">
-      <label
-        >First Name
-        <input type="text" name="first-name" required minlength="2" maxlength="30" />
-      </label>
-      <label
-        >Last Name
-        <input type="text" name="last-name" required minlength="2" maxlength="30"/>
-      </label>
-      <label
-        >Email
-        <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
-      </label>
-      <label
-        >Phone Number
-        <input type="tel" name="phone" required />
-      </label>
-      <label
-        >Password
-        <input type="password" name="password" required />
-      </label>
-      <label
-        >Confirm Password
-        <input type="password" name="confirm-password" required />
-      </label>
-
-      <div class="account-section">
-        <button type="submit">Create Account</button>
-        <span>
-          Already have an account?
-          <a href="null" target="_blank" rel="noopener noreferrer">
-            Log in</a
-          ></span
-        >
+        <form action="https://httpbin.org/post" method="post">
+          <div class="name">
+            <label
+              >First Name
+              <input
+                type="text"
+                name="first-name"
+                required
+                minlength="2"
+                maxlength="30"
+              />
+            </label>
+            <label
+              >Last Name
+              <input
+                type="text"
+                name="last-name"
+                required
+                minlength="2"
+                maxlength="30"
+              />
+            </label>
           </div>
-    </form>
+
+          <div class="email-phone">
+            <label
+              >Email
+              <input
+                type="email"
+                name="email"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              />
+            </label>
+            <label
+              >Phone Number
+              <input type="tel" name="phone" required />
+            </label>
+          </div>
+          <div class="password">
+            <label
+              >Password
+              <input type="password" name="password" required />
+            </label>
+            <label
+              >Confirm Password
+              <input type="password" name="confirm-password" required />
+            </label>
+          </div>
+
+          <div class="account-section">
+            <button type="submit">Create Account</button>
+            <span>
+              Already have an account?
+              <a href="null" target="_blank" rel="noopener noreferrer">
+                Log in</a
+              ></span
+            >
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

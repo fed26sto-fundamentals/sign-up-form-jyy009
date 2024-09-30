@@ -4,22 +4,40 @@
   box-sizing: border-box;
 }
 
-.hero-image {
-  /* width: calc(100% / 3);
-  height: auto; */
+.page-container {
+  display: flex;
+  min-height: 100vh;
 }
 
-form input:hover {
-  border: 1px solid #54abb8;
-}
-form input:focus {
-  border: 1px solid #54abb8;
+.hero-section {
+min-width: calc(100% / 3)
+
 }
 
-form input:valid {
-  background-color: green;
+.hero-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-form input:invalid {
-  border: solid red 2px;
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+form div {
+display: flex;
+gap: 20px;
+}
+
+div.account-section {
+  flex-direction: column;
 }
