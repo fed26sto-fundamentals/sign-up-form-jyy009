@@ -1,43 +1,80 @@
 * {
   font-family: "Lato", Verdana, Tahoma, sans-serif;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-size: 24px;
+  color: var(--main-font-color);
 }
 
 :root {
   --border-yellow: rgb(227, 223, 99);
   --border-red: rgb(194, 78, 78);
   --border-green: rgb(51, 110, 51);
-  --color-shadow: rgb(128, 157, 170);
   --border-hover: rgb(118, 157, 194);
+  --main-font-color: rgba(9, 9, 9, 0.908);
+  --button-color: #596d48;
+  --button-text-color: rgb(242, 242, 242);
+  --label-txt-color: rgba(32, 31, 31, 0.781);
+  --bg-color: rgba(243, 240, 240, 0.827);
 }
 
 .page-container {
   display: flex;
   min-height: 100vh;
-}
-
-.hero-section {
-  max-width: calc(100% / 3);
-}
-
-.hero-section img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  overflow: auto;
 }
 
 .info-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+  width: 100%;
+}
+
+.info-form-section {
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  padding: 100px 30px 50px 30px;
+  font-weight: 600;
+  /* height: calc(100% / 3) */
+}
+
+.info-section h3 {
+  margin-bottom: 30px;
+}
+
+img {
+  min-width: calc(100% / 3);
+  object-fit: cover;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-weight: 600;
+  padding: 30px;
+}
+
+.button-section a {
+  text-decoration: none;
+  color: var(--button-color);
+  font-size: 0.7rem;
 }
 
 form div {
@@ -48,6 +85,8 @@ form div {
 form label {
   display: flex;
   flex-direction: column;
+  color: var(--label-txt-color);
+  gap: 5px;
 }
 
 div.account-section {
@@ -59,6 +98,7 @@ input {
   border-radius: 5px;
   padding: 5px;
   outline: none;
+  font-size: 0.7rem;
 }
 
 input:hover {
@@ -66,16 +106,38 @@ input:hover {
 }
 
 input:valid {
-  outline: solid 2px var(--border-green);
-
+  outline: solid 1px var(--border-green);
 }
 
 input:focus:not(:placeholder-shown):invalid {
   outline: solid 1px var(--border-yellow);
-
 }
 
 input:not(:placeholder-shown):invalid {
   outline: solid 1px var(--border-red);
+}
 
+label {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.info-container p {
+  font-size: 0.8rem;
+}
+
+button {
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  border-radius: 10px;
+  width: 40%;
+  font-size: 0.7rem;
+  padding: 5px 20px;
+  font-weight: 600;
+  border: none;
+}
+
+.button-section span {
+  font-size: 0.7rem;
 }

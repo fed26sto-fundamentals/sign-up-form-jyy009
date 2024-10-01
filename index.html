@@ -14,23 +14,26 @@
   </head>
   <body>
     <div class="page-container">
-      <section class="hero-section">
-        <img
-          src="./public/apartments.jpg"
-          alt="apartment"
-          class="hero-image"
-          width="700px"
-        />
-      </section>
+      <img
+        src="./public/apartments.jpg"
+        alt="apartment"
+        class="hero-image"
+        width="700px"
+      />
 
       <div class="info-container">
-        <h3 class="info-text">
-          Discover your dream home today with our immersive home photo
-          experience and personalized listings tailored just for you. Experience
-          a seamless home-buying journey, from browsing properties to securing
-          your ideal space, all in one place!
-        </h3>
-        <h3>Sign up for a more personalized experience!</h3>
+
+        <div class="info-form-section">
+          
+        <div class="info-section">
+          <h3 class="info-text">
+            Discover your dream home today with our immersive home photo
+            experience and personalized listings tailored just for you.
+            Experience a seamless home-buying journey, from browsing properties
+            to securing your ideal space, all in one place!
+          </h3>
+          <p>Sign up for a more personalized experience!</p>
+        </div>
 
         <form action="https://httpbin.org/post" method="post">
           <div class="name">
@@ -42,7 +45,7 @@
                 required
                 minlength="2"
                 maxlength="30"
-                placeholder="first"
+                placeholder="first name"
               />
             </label>
             <label
@@ -53,7 +56,7 @@
                 required
                 minlength="2"
                 maxlength="30"
-                placeholder="first"
+                placeholder="last name"
               />
             </label>
           </div>
@@ -66,7 +69,7 @@
                 name="email"
                 required
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                placeholder="first"
+                placeholder="xxx@xxx.com"
               />
             </label>
             <label
@@ -89,7 +92,9 @@
                 type="password"
                 name="password"
                 required
-                placeholder="first"
+                placeholder="password"
+                minlength="10"
+                maxlength="20"
               />
             </label>
             <label
@@ -98,21 +103,34 @@
                 type="password"
                 name="confirm-password"
                 required
-                placeholder="first"
+                placeholder="confirm password"
+                minlength="10"
+                maxlength="20"
               />
             </label>
           </div>
+        </div>
 
-          <div class="account-section">
+          <div class="button-section">
             <button type="submit">Create Account</button>
             <span>
               Already have an account?
               <a href="null" target="_blank" rel="noopener noreferrer">
                 Log in</a
-              ></span
-            >
+              >
+            </span>
           </div>
         </form>
+
+        <!-- <div class="button-section">
+          <button type="submit">Create Account</button>
+          <span>
+            Already have an account?
+            <a href="null" target="_blank" rel="noopener noreferrer">
+              Log in</a
+            >
+          </span>
+        </div> -->
       </div>
     </div>
   </body>
