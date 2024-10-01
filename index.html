@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign Up Form</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./app.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,11 +25,12 @@
 
       <div class="info-container">
         <h3 class="info-text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt,
-          suscipit illum quae dolores dolore ad pariatur minima, iure
-          voluptatibus, obcaecati eveniet! Corporis, eius numquam. Non iure
-          consectetur quasi quo voluptatem.
+          Discover your dream home today with our immersive home photo
+          experience and personalized listings tailored just for you. Experience
+          a seamless home-buying journey, from browsing properties to securing
+          your ideal space, all in one place!
         </h3>
+        <h3>Sign up for a more personalized experience!</h3>
 
         <form action="https://httpbin.org/post" method="post">
           <div class="name">
@@ -42,6 +42,7 @@
                 required
                 minlength="2"
                 maxlength="30"
+                placeholder="first"
               />
             </label>
             <label
@@ -52,6 +53,7 @@
                 required
                 minlength="2"
                 maxlength="30"
+                placeholder="first"
               />
             </label>
           </div>
@@ -64,6 +66,7 @@
                 name="email"
                 required
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                placeholder="first"
               />
             </label>
             <label
@@ -82,11 +85,21 @@
           <div class="password">
             <label
               >Password
-              <input type="password" name="password" required />
+              <input
+                type="password"
+                name="password"
+                required
+                placeholder="first"
+              />
             </label>
             <label
               >Confirm Password
-              <input type="password" name="confirm-password" required />
+              <input
+                type="password"
+                name="confirm-password"
+                required
+                placeholder="first"
+              />
             </label>
           </div>
 

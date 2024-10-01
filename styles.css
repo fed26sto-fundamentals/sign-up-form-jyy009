@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --border-yellow: rgb(227, 223, 99);
+  --border-red: rgb(194, 78, 78);
+  --border-green: rgb(51, 110, 51);
+  --color-shadow: rgb(128, 157, 170);
+  --border-hover: rgb(118, 157, 194);
+}
+
 .page-container {
   display: flex;
   min-height: 100vh;
@@ -45,21 +53,29 @@ form label {
 div.account-section {
   flex-direction: column;
 }
-input:hover {
-  box-shadow: 0 0 5px 1px grey;
 
-}
-input:valid {
-  outline: solid 2px green;
-}
-
-
-input:invalid {
+input {
+  border: solid 1px #e5e7eb;
+  border-radius: 5px;
+  padding: 5px;
   outline: none;
+}
+
+input:hover {
+  outline: solid 1px var(--border-hover);
+}
+
+input:valid {
+  outline: solid 2px var(--border-green);
 
 }
 
-input:focus:invalid {
-  outline: solid 2px red;
+input:focus:not(:placeholder-shown):invalid {
+  outline: solid 1px var(--border-yellow);
+
+}
+
+input:not(:placeholder-shown):invalid {
+  outline: solid 1px var(--border-red);
 
 }
