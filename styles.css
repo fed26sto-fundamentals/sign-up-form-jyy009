@@ -22,19 +22,42 @@
 .page-container {
   display: flex;
   min-height: 100vh;
-  overflow: auto;
+  border: solid 1px blue;
+}
+
+.image-container {
+  position: relative;
+  flex: 0 0 calc(100% / 3);
+  min-height: 100vh;
+  border: solid 1px red;
+  overflow: hidden;
+}
+
+.image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border: solid 1px yellowgreen;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--button-text-color);
+  text-shadow: 1px 3px 6px #000000c4;
 }
 
 .info-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-}
-
-.info-form-section {
-  display: flex;
-  flex-direction: column;
-  /* height: 100%; */
+  max-width: 100%;
+  flex: 1;
+  max-width: 66.67%;
+  border: solid 1px orangered;
 }
 
 .info-section {
@@ -43,16 +66,10 @@
   background-color: var(--bg-color);
   padding: 100px 30px 50px 30px;
   font-weight: 600;
-  /* height: calc(100% / 3) */
 }
 
 .info-section h3 {
   margin-bottom: 30px;
-}
-
-img {
-  min-width: calc(100% / 3);
-  object-fit: cover;
 }
 
 form {
@@ -60,25 +77,13 @@ form {
   flex-direction: column;
   gap: 25px;
   padding: 40px 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.button-section {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  font-weight: 600;
-  padding: 30px;
-}
-
-.button-section a {
-  text-decoration: none;
-  color: var(--button-color);
-  font-size: 0.7rem;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  border: solid 1px pink;
 }
 
 form div {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -87,6 +92,19 @@ form label {
   flex-direction: column;
   color: var(--label-txt-color);
   gap: 5px;
+}
+
+.button-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-weight: 600;
+}
+
+.button-section a {
+  text-decoration: none;
+  color: var(--button-color);
+  font-size: 0.7rem;
 }
 
 div.account-section {
@@ -131,9 +149,9 @@ button {
   background-color: var(--button-color);
   color: var(--button-text-color);
   border-radius: 10px;
-  width: 40%;
+  width: 50%;
   font-size: 0.7rem;
-  padding: 5px 20px;
+  padding: 10px 30px;
   font-weight: 600;
   border: none;
 }
